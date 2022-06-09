@@ -6,6 +6,8 @@ In this project I'm saving my implementation of the theoretical sorting algorith
 - Insertion sort
 - Selection sort (although not closly looked at in the lecture)
 - Merge sort
+- Quicksort
+- Heapsort 
 
 Every Algorithm is commented in a way to try to make it easy to understand how the algorithm works, and what it does.
 
