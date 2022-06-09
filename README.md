@@ -3,11 +3,15 @@
 In this project I'm saving my implementation of the theoretical sorting algorithms I learned in my algorithms and datastructures class of Summer 2022.
 
 # Currently Implemented
+Comparision Sorts:
 - Insertion sort
 - Selection sort (although not closly looked at in the lecture)
 - Merge sort
 - Quicksort
 - Heapsort 
+
+Linear Sorts:
+- Counting Sort (integers with known highest int value)
 
 Every Algorithm is commented in a way to try to make it easy to understand how the algorithm works, and what it does.
 
