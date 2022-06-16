@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Algorithms;
+namespace AlgDs;
 static class MergeSort
 {
     public static void Sort(int[] array, int p, int r)
