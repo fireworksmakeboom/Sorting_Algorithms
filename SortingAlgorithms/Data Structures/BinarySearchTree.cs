@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace AlgDs;
 
@@ -191,5 +192,38 @@ public class BinarySearchTree<T>
             minimum.left.parent = minimum;
         }
         return true;
+    }
+
+    //Display Binary Tree
+    [DebuggerDisplay("{DebuggerDisplay}")]
+    private string DebuggerDisplay => GetDotRepresentation();
+
+    public string GetDotRepresentation()
+    {
+        var sb = new StringBuilder();
+
+        sb.AppendLine("digraph BST {");
+        GetDotRepresentation(this.root, sb);
+        sb.AppendLine("}");
+
+        return sb.ToString();
+    }
+
+    private void GetDotRepresentation(TreeNode<T> root, StringBuilder sb)
+    {
+        if (root == null) return;
+
+        if (root.left != null)
+        {
+            sb.AppendLine($"{root.key} -> {root.left.key}");
+        }
+
+        if (root.right != null)
+        {
+            sb.AppendLine($"{root.key} -> {root.right.key}");
+        }
+
+        GetDotRepresentation(root.left, sb);
+        GetDotRepresentation(root.right, sb);
     }
 }

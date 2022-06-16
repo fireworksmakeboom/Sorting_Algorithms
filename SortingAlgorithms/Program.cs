@@ -81,6 +81,8 @@ foreach(int i in list)
     tree.PrintTreeInorder();
 }
 
+Console.WriteLine("\n"); 
+
 foreach(int i in list)
 {
     node = tree.Search(i);
